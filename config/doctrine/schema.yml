@@ -1,0 +1,47 @@
+Cine:
+  actAs: {Timestampable: ~}
+  columns:
+    direccion: {type: string(255), notnull: true}
+    
+Sala:
+  actAs: {Timestampable: ~}
+  columns:
+    cineId: {type: integer, notnull: true}
+    tamanioPantalla: {type: integer, notnull: true}
+  relations:
+    Cine: {local: cineId, foreign: id, foreignAlias: Salas}
+    
+Sesion:
+  actAs: {Timestampable: ~}
+  columns:
+    salaId: {type: integer, notnull: true}
+    hora: {type: string(255), notnull: true}
+    tipoProyeccion: {type: string(255), notnull: true}
+  relations:
+    Sala: {local: salaId, foreign: id, foreignAlias: Sesiones}
+    Pelicula: {local: salaId, foreign: id, foreignAlias: Sesiones}
+    
+Pelicula:
+  actAs: {Timestampable: ~}
+  columns:
+    titulo: {type: string(255), notnull: true}
+    duracion:  {type: integer, notnull: true}
+    sesionId: {type: integer, notnull: true}
+    director: {type: string(255), notnull: true}
+    tiene2D: {type: boolean, default: true}
+    tiene3D: {type: boolean}
+  relations:
+    Sala: {local: sesionId, foreign: id, foreignAlias: Peliculas}
+    
+Precio:
+  actAs: {Timestampable: ~}
+  columns:
+    tipoPrecio: {type: string(255), notnull: true}
+    valor2D:  {type: integer}
+    valor3D: {type: integer}
+    
+FechaEspecial:
+  actAs: {Timestampable: ~}
+  columns:
+    tipoDia: {type: string(255), notnull: true}
+    fecha:  {type: date}
