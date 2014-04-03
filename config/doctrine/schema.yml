@@ -15,23 +15,21 @@ Sesion:
   actAs: {Timestampable: ~}
   columns:
     salaId: {type: integer, notnull: true}
+    peliculaId: {type: integer, notnull: true}
     hora: {type: string(255), notnull: true}
     tipoProyeccion: {type: string(255), notnull: true}
   relations:
     Sala: {local: salaId, foreign: id, foreignAlias: Sesiones}
-    Pelicula: {local: salaId, foreign: id, foreignAlias: Sesiones}
+    Pelicula: {local: peliculaId, foreign: id, foreignAlias: Sesiones}
     
 Pelicula:
   actAs: {Timestampable: ~}
   columns:
     titulo: {type: string(255), notnull: true}
     duracion:  {type: integer, notnull: true}
-    sesionId: {type: integer, notnull: true}
     director: {type: string(255), notnull: true}
     tiene2D: {type: boolean, default: true}
     tiene3D: {type: boolean}
-  relations:
-    Sala: {local: sesionId, foreign: id, foreignAlias: Peliculas}
     
 Precio:
   actAs: {Timestampable: ~}
