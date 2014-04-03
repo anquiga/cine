@@ -5,6 +5,14 @@
 homepage:
   url:   /
   param: { module: default, action: index }
+  
+sala_crear:
+  url: /sala/crear
+  param: { module: sala, action: crear }
+  
+listar_salas_por_cine:
+  url:  /sala/:id
+  param: { module: sala, action: filtradasPorCine }
 
 # generic rules
 # please, remove them by adding more specific rules
