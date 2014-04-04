@@ -16,4 +16,11 @@ class CineTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Cine');
     }
+
+    
+    public function getTodos(){
+        return $this->createQuery('cine')
+               ->execute();
+    }
 }
+

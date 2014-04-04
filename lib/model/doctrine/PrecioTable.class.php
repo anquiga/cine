@@ -34,7 +34,3 @@ class PrecioTable extends Doctrine_Table
            }
 
     }
-
-
-
-

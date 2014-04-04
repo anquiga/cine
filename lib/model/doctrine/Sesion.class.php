@@ -12,6 +12,7 @@
  */
 class Sesion extends BaseSesion
 {
+
     public function __toString(){
       return  $this->getHora(); 
     }
@@ -20,4 +21,5 @@ class Sesion extends BaseSesion
            
       return $precio;
     }
+
 }

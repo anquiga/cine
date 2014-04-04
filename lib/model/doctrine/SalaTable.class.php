@@ -14,6 +14,15 @@ class SalaTable extends Doctrine_Table
      */
     public static function getInstance()
     {
-        return Doctrine_Core::getTable('Sala');
+        return Doctrine_Core::getTable('sala');
+    }
+    
+    public function getTodas(){
+        return $this->createQuery('sala')->execute();
+    }
+    
+    public function getFiltradasPorCine($cine)
+    {
+         return $this->createQuery('sala')->where('sala.cineId='.$cine->id)->execute();
     }
 }
