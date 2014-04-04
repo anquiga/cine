@@ -16,4 +16,13 @@ class SesionTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Sesion');
     }
+
+     public function getTodas(){
+        return $this->createQuery('sesion')->execute();
+    }
+    public function filtrarPorSala(){
+        $precio = Doctrine::getTable('Sala')->find($request->getSalaId()); 
+    }    
+    
 }
+

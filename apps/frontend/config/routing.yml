@@ -11,6 +11,15 @@ homepage:
 default_index:
   url:   /:module
   param: { action: index }
+listar_sesion:
+  url:   /sesion
+  param: { module: sesion, action: index}   
+crear_sesion:
+  url:   /sesion/crear
+  param: { module: sesion, action: crear} 
+editar_sesion:
+  url:   /sesion/editar
+  param: { module: sesion, action: editar}    
 
 default:
   url:   /:module/:action/*

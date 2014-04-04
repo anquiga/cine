@@ -12,4 +12,12 @@
  */
 class Sesion extends BaseSesion
 {
+    public function __toString(){
+      return  $this->getHora(); 
+    }
+    public static function getPrecio(){
+      $precio = Doctrine::getTable('Precio')->find($request->getPrecio($this->dia,$this->version));
+           
+      return $precio;
+    }
 }
