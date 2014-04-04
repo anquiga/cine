@@ -17,6 +17,7 @@ class SesionTable extends Doctrine_Table
         return Doctrine_Core::getTable('Sesion');
     }
 
+
      public function getTodas(){
         return $this->createQuery('sesion')->execute();
     }
@@ -25,4 +26,5 @@ class SesionTable extends Doctrine_Table
     }    
     
 }
+
 

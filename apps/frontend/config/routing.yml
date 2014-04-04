@@ -29,5 +29,13 @@ editar_sesion:
   url:   /sesion/editar
   param: { module: sesion, action: editar}    
 
+pelicula_listar:
+  url:  /pelicula
+  param: { module: pelicula, action: index}
+
+pelicula_crear:
+  url:  /pelicula/crear
+  param: { module: pelicula, action: crear}
+
 default:
   url:   /:module/:action/*

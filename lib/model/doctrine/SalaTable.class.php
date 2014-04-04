@@ -26,3 +26,4 @@ class SalaTable extends Doctrine_Table
          return $this->createQuery('sala')->where('sala.cineId='.$cine->id)->execute();
     }
 }
+

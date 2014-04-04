@@ -16,6 +16,7 @@ class PrecioTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Precio');
     }
+
     public function getPrecio($dia, $tipoProyeccion){
         //para que hace falta que me pase el dia si solo vamos a probar si es el dia de hoy?
         $fecha = Doctrine::getTable('FechaEspecial')->getDia(date('Y-m-d'))->getTipoDia();
@@ -34,3 +35,4 @@ class PrecioTable extends Doctrine_Table
            }
 
     }
+

@@ -16,4 +16,12 @@ class PeliculaTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Pelicula');
     }
+<<<<<<< HEAD
 }
+=======
+    
+    public function getTodas(){
+      return $this->createQuery('pelicula')->execute();
+    }
+}
+>>>>>>> 6eaa45c460819ebacddfb506dc87e4597108a491

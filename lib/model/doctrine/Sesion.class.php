@@ -12,7 +12,6 @@
  */
 class Sesion extends BaseSesion
 {
-
     public function __toString(){
       return  $this->getHora(); 
     }

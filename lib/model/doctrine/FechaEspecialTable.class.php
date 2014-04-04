@@ -16,6 +16,7 @@ class FechaEspecialTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('FechaEspecial');
     }
+
     public function getDia($dia){
         return $this->createQuery('fechaEspecial')
                ->where('fechaEspecial.fecha=\''.$dia.'\'')

@@ -12,4 +12,8 @@
  */
 class Pelicula extends BasePelicula
 {
+    public function __toString(){
+      return $this->getTitulo().'   '.$this->getDuracion().'   '.$this->getDirector();
+      }
+
 }

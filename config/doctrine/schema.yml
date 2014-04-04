@@ -27,12 +27,9 @@ Pelicula:
   columns:
     titulo: {type: string(255), notnull: true}
     duracion:  {type: integer, notnull: true}
-    sesionId: {type: integer, notnull: true}
     director: {type: string(255), notnull: true}
     tiene2D: {type: boolean, default: true}
     tiene3D: {type: boolean}
-  relations:
-    Sala: {local: sesionId, foreign: id, foreignAlias: Peliculas}
     
 Precio:
   actAs: {Timestampable: ~}
